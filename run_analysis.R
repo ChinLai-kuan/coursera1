@@ -61,7 +61,7 @@ names(TidyData)<-gsub("gravity", "Gravity", names(TidyData))
 tidy_data <- TidyData %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
-write.table(tidy_data, "FinalData.txt", row.name=FALSE)
+write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
 
 # Final Check Stage
 
